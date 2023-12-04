@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach",
+            "type": "mono",
+            "request": "attach",
+            "address": "localhost",
+            "port": 10000,
+            "preLaunchTask": "run"
+        }
+    //     {
+    //         "name": ".NET MAUI",
+    //         "type": "maui",
+    //         "request": "launch",
+    //         "preLaunchTask": "maui: Build",
+    //         // "project": "D:/workspaces/dotnet_playground/app1",
+    //         // "program": "D:/workspaces/dotnet_playground/app1",
+    //         // "project": "D:\\workspaces\\dotnet_playground\\app1",
+    //         "cwd": "D:\\workspaces\\dotnet_playground\\app1\\bin",
+    //         "program": "app1.exe",
+    //         // "program": "D:\\workspaces\\dotnet_playground\\app1",
+    //         // "program": "app1.exe"
+    //         // "project": "D:/workspaces/dotnet_playground/app1/bin/Debug/net8.0-windows10.0.19041.0/app1.dll"
+    //         // "project": "D:/workspaces/dotnet_playground/app1/bin/Debug/net8.0-windows10.0.19041.0/app1.exe"
+    //     }
+    // ]
+}

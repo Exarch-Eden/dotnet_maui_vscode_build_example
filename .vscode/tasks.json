@@ -1,0 +1,88 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "${input:project}",
+                "-t:${input:target}",
+                "-f:${input:targetFramework}",
+                "-c:${input:config}"
+                // NOTE: generated from template
+                // // Ask dotnet build to generate full paths for file names.
+                // "/property:GenerateFullPaths=true",
+                // // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+                // "/consoleloggerparameters:NoSummary"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "run",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "${input:project}",
+                "-f:${input:targetFramework}",
+                "-c:${input:config}",
+                "-t:Run"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        
+    ],
+    "inputs": [
+        {
+            "id": "project",
+            "type": "pickString",
+            "default": "app1.csproj",
+            "description": "Select the project to build / run",
+            "options": [
+                "app1.csproj"
+            ]
+        },
+        {
+            "id": "config",
+            "type": "pickString",
+            "default": "Debug",
+            "description": "Select build configuration",
+            "options": [
+                "Debug"
+            ]
+        },
+        {
+            "id": "target",
+            "type": "pickString",
+            "default": "Build",
+            "description": "Select build target",
+            "options": [
+                "Build"
+            ]
+        },
+        {
+            "id": "targetFramework",
+            "type": "pickString",
+            "default": "net8.0-windows10.0.19041.0",
+            "description": "Select target framework",
+            "options": [
+                "net8.0-windows10.0.19041.0"
+            ]
+        }
+    ]
+}
